@@ -1,0 +1,244 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2020-11-24T22:39:00Z"
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/instance-type: t3.micro
+    beta.kubernetes.io/os: linux
+    eks.amazonaws.com/capacityType: ON_DEMAND
+    eks.amazonaws.com/nodegroup: node-1
+    eks.amazonaws.com/nodegroup-image: ami-0b6649df64355ba5c
+    failure-domain.beta.kubernetes.io/region: us-east-1
+    failure-domain.beta.kubernetes.io/zone: us-east-1f
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: ip-172-31-73-76.ec2.internal
+    kubernetes.io/os: linux
+    node.kubernetes.io/instance-type: t2.micro
+    topology.kubernetes.io/region: us-east-1
+    topology.kubernetes.io/zone: us-east-1f
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:node.alpha.kubernetes.io/ttl: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-11-24T22:39:01Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:volumes.kubernetes.io/controller-managed-attach-detach: {}
+        f:labels:
+          .: {}
+          f:beta.kubernetes.io/arch: {}
+          f:beta.kubernetes.io/instance-type: {}
+          f:beta.kubernetes.io/os: {}
+          f:eks.amazonaws.com/capacityType: {}
+          f:eks.amazonaws.com/nodegroup: {}
+          f:eks.amazonaws.com/nodegroup-image: {}
+          f:failure-domain.beta.kubernetes.io/region: {}
+          f:failure-domain.beta.kubernetes.io/zone: {}
+          f:kubernetes.io/arch: {}
+          f:kubernetes.io/hostname: {}
+          f:kubernetes.io/os: {}
+          f:node.kubernetes.io/instance-type: {}
+          f:topology.kubernetes.io/region: {}
+          f:topology.kubernetes.io/zone: {}
+      f:spec:
+        f:providerID: {}
+      f:status:
+        f:addresses:
+          .: {}
+          k:{"type":"ExternalDNS"}:
+            .: {}
+            f:address: {}
+            f:type: {}
+          k:{"type":"ExternalIP"}:
+            .: {}
+            f:address: {}
+            f:type: {}
+          k:{"type":"Hostname"}:
+            .: {}
+            f:address: {}
+            f:type: {}
+          k:{"type":"InternalDNS"}:
+            .: {}
+            f:address: {}
+            f:type: {}
+          k:{"type":"InternalIP"}:
+            .: {}
+            f:address: {}
+            f:type: {}
+        f:allocatable:
+          .: {}
+          f:attachable-volumes-aws-ebs: {}
+          f:cpu: {}
+          f:ephemeral-storage: {}
+          f:hugepages-1Gi: {}
+          f:hugepages-2Mi: {}
+          f:memory: {}
+          f:pods: {}
+        f:capacity:
+          .: {}
+          f:attachable-volumes-aws-ebs: {}
+          f:cpu: {}
+          f:ephemeral-storage: {}
+          f:hugepages-1Gi: {}
+          f:hugepages-2Mi: {}
+          f:memory: {}
+          f:pods: {}
+        f:conditions:
+          .: {}
+          k:{"type":"DiskPressure"}:
+            .: {}
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"MemoryPressure"}:
+            .: {}
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PIDPressure"}:
+            .: {}
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:daemonEndpoints:
+          f:kubeletEndpoint:
+            f:Port: {}
+        f:images: {}
+        f:nodeInfo:
+          f:architecture: {}
+          f:bootID: {}
+          f:containerRuntimeVersion: {}
+          f:kernelVersion: {}
+          f:kubeProxyVersion: {}
+          f:kubeletVersion: {}
+          f:machineID: {}
+          f:operatingSystem: {}
+          f:osImage: {}
+          f:systemUUID: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-11-24T23:09:37Z"
+  name: ip-172-31-73-76.ec2.internal
+  resourceVersion: "7640"
+  selfLink: /api/v1/nodes/ip-172-31-73-76.ec2.internal
+  uid: 3641efdb-7117-4c70-991b-a33983fa53f1
+spec:
+  providerID: aws:///us-east-1f/i-0e3a11e00300eacda
+  taints:
+  - effect: NoSchedule
+    key: node.kubernetes.io/not-ready
+status:
+  addresses:
+  - address: 172.31.73.76
+    type: InternalIP
+  - address: 34.204.170.95
+    type: ExternalIP
+  - address: ip-172-31-73-76.ec2.internal
+    type: Hostname
+  - address: ip-172-31-73-76.ec2.internal
+    type: InternalDNS
+  - address: ec2-34-204-170-95.compute-1.amazonaws.com
+    type: ExternalDNS
+  allocatable:
+    attachable-volumes-aws-ebs: "25"
+    cpu: 1930m
+    ephemeral-storage: "8578591524"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 571484Ki
+    pods: "4"
+  capacity:
+    attachable-volumes-aws-ebs: "25"
+    cpu: "2"
+    ephemeral-storage: 10473452Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 980060Ki
+    pods: "4"
+  conditions:
+  - lastHeartbeatTime: "2020-11-24T23:09:37Z"
+    lastTransitionTime: "2020-11-24T22:39:00Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2020-11-24T23:09:37Z"
+    lastTransitionTime: "2020-11-24T22:39:00Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2020-11-24T23:09:37Z"
+    lastTransitionTime: "2020-11-24T22:39:00Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2020-11-24T23:09:37Z"
+    lastTransitionTime: "2020-11-24T22:39:00Z"
+    message: 'runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady
+      message:docker: network plugin is not ready: cni config uninitialized'
+    reason: KubeletNotReady
+    status: "False"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - 602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni@sha256:f310c918ee2b4ebced76d2d64a2ec128dde3b364d1b495f0ae73011f489d474d
+    - 602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.7.5-eksbuild.1
+    sizeBytes: 312076970
+  - names:
+    - 602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init@sha256:d96d712513464de6ce94e422634a25546565418f20d1b28d3bce399d578f3296
+    - 602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.7.5-eksbuild.1
+    sizeBytes: 287782202
+  - names:
+    - 602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy@sha256:71b15b05cdee85a1ff6bdb5bdf9c0788c5089cc72b2f0f41a666c22488670ea4
+    - 602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.18.8-eksbuild.1
+    sizeBytes: 131606723
+  - names:
+    - 602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/pause@sha256:1cb4ab85a3480446f9243178395e6bee7350f0d71296daeb6a9fdd221e23aea6
+    - 602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/pause:3.1-eksbuild.1
+    sizeBytes: 682696
+  nodeInfo:
+    architecture: amd64
+    bootID: 3d62d764-c2ec-4ed6-b41c-36dd0e2788f7
+    containerRuntimeVersion: docker://19.3.6
+    kernelVersion: 4.14.203-156.332.amzn2.x86_64
+    kubeProxyVersion: v1.18.9-eks-d1db3c
+    kubeletVersion: v1.18.9-eks-d1db3c
+    machineID: ec207052cd475ce44262773a19c30439
+    operatingSystem: linux
+    osImage: Amazon Linux 2
+    systemUUID: EC207052-CD47-5CE4-4262-773A19C30439
