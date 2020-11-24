@@ -1,0 +1,17 @@
+name: game
+namespace: apps
+annotations:
+  kubernetes.io/ingress.class: kubernetes.io/ingress.class
+  alb.ingress.kubernetes.io/healthcheck-path: kubernetes.io/ingress.class
+
+labels:
+  app: game
+spec:
+  rules:
+  - host: game-apps.demo.ort.edu.uy
+    http:
+      paths:
+        - path: /*
+          backend:
+            serviceName: game
+            servicePort: 80
